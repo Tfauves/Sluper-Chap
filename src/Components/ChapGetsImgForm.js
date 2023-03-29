@@ -3,7 +3,9 @@ import InlineInputContainer from "./common/InlineInputContainer";
 import Input from "../Components/common/Input";
 import { Button } from "@mui/material";
 
-const ChapGetsImgForm = (query, submitting, updateForm, onSubmit) => {
+const ChapGetsImgForm = (props) => {
+  const { query, submitting, updateForm, onSubmit } = props;
+
   const handleChange = (e) => {
     updateForm(e.target.id, e.target.value);
   };
@@ -23,11 +25,19 @@ const ChapGetsImgForm = (query, submitting, updateForm, onSubmit) => {
       >
         <InlineInputContainer>
           <Input
-            id="img"
-            placeholder="ask for pics"
+            id="prompt"
+            placeholder="ill find you pics of..."
             type="e"
             onChange={handleChange}
-            value={query.username}
+            value={query.prompt}
+            required
+          />
+          <Input
+            id="n"
+            placeholder="how many"
+            type="e"
+            onChange={handleChange}
+            value={query.n}
             required
           />
         </InlineInputContainer>
