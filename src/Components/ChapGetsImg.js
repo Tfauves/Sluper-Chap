@@ -29,7 +29,7 @@ const ChapGetsImg = (props) => {
         data,
         {
           header: {
-            Authorization: `Bearer ${"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"}`,
+            Authorization: `Bearer ${REACT_APP_API_KEY}`,
           },
         }
       );
