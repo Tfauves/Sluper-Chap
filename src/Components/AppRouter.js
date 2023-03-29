@@ -1,12 +1,12 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import ChapGetsImg from "./ChapGetsImg";
+import OptionSelection from "./OptionSelection";
 
 const AppRouter = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<ChapGetsImg />} />
+        <Route path="/" element={<OptionSelection />} />
       </Routes>
     </div>
   );

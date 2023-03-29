@@ -1,12 +1,14 @@
 import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./Components/AppRouter";
+import OptionSelection from "./Components/OptionSelection";
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <OptionSelection />
+      {/* <BrowserRouter>
         <AppRouter />
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }
