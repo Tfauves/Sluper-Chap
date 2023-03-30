@@ -1,34 +1,26 @@
 import React from "react";
-import OptionItem from "./OptionItem";
 import { arrayItems } from "./../AIOptions/index";
 
 const OptionSelection = () => {
   console.log(arrayItems);
   return (
-    <div
-      style={{
-        position: "absolute",
-        height: "100vh",
-        backgroundColor: "#303030",
-        textAlign: "center",
-        width: "100%",
-      }}
-    >
-      <h1
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          color: "#f1f1f1",
-          marginTop: "4em",
-        }}
-      >
+    <>
+      <h1 style={{ marginBottom: "1em" }} className="heading">
         Sluper Chap AI
       </h1>
-      {arrayItems.map((item) => {
-        return <h1 key={item.id}>{item.name}</h1>;
-      })}
-    </div>
+      <div className="grid-main">
+        {arrayItems.map((item) => {
+          return (
+            <div className="grid-child">
+              <h3 style={{ marginBottom: "-1em" }} key={item.id}>
+                {item.name}
+              </h3>
+              <p key={item.id}>{item.description}</p>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 export default OptionSelection;
