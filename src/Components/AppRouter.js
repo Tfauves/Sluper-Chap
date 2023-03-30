@@ -1,12 +1,12 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import OptionSelection from "./OptionSelection";
+import SluperChap from "./SluperChap";
 
 const AppRouter = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<OptionSelection />} />
+        <Route path="/" element={<SluperChap />} />
       </Routes>
     </div>
   );
